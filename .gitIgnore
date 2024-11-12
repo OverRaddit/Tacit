@@ -1,4 +1,38 @@
-.DS_Store
-build/
+# Custom 문서 파일들
 doc/
+
+# Node.js 관련 파일들
+node_modules/
+# package-lock.json
+
+# 빌드된 파일 및 디렉토리
+build/
+dist/
+
+# 캐시 및 로그 파일
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# 운영체제 관련 파일들
+.DS_Store
+Thumbs.db
+
+# VSC 및 IntelliJ 관련 파일들
+.vscode/
+.idea/
+
+# Electron 빌드 관련 파일들
+*.asar
+*.db
+
+# Excel 파일 (필요 시 추가)
 files.xlsx
+
+# 기타 임시 파일들
+*.tmp
+*.swp
+*.bak
+*.temp
