@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tacit</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tacit</h1>
+      <div class="input-group">
+        <input
+          type="text"
+          id="directory-path"
+          placeholder="Enter directory path"
+          readonly
+        />
+        <button id="select-directory" class="btn">Select Directory</button>
+        <button id="load-files" class="btn">Load Files</button>
+      </div>
+
+      <div class="input-group">
+        <input type="file" id="file-upload" value="" />
+        <button id="upload-file" class="btn">Upload File</button>
+      </div>
+
+      <ul id="file-list"></ul>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

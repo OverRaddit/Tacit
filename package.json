@@ -1,0 +1,51 @@
+{
+  "name": "tacit",
+  "version": "1.0.0",
+  "description": "A file renaming utility",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:mac": "electron-builder build --mac",
+    "build:win32": "electron-builder build --win nsis:ia32",
+    "build:win64": "electron-builder build --win nsis:x64"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electrion": "^0.0.1-security",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "@electron/remote": "^2.1.2",
+    "file-saver": "^2.0.5",
+    "xlsx": "^0.18.5"
+  },
+  "build": {
+    "appId": "com.example.tacit",
+    "productName": "Tacit",
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "directories": {
+      "buildResources": "build"
+    }
+  }
+}

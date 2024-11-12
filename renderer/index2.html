@@ -1,0 +1,190 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #f8f9fa, #e9ecef);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+      h1 {
+        font-size: 2.5em;
+        margin-bottom: 0.5em;
+        color: #343a40;
+      }
+      .container {
+        background: white;
+        padding: 2em;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      input[type='text'],
+      input[type='file'] {
+        width: 80%;
+        padding: 0.8em;
+        margin: 0.5em 0;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        font-size: 1em;
+      }
+      button {
+        padding: 0.8em 1.5em;
+        margin: 0.5em 0;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+        background: #007bff;
+        color: white;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      button:hover {
+        background: #0056b3;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      ul li {
+        background: #f8f9fa;
+        margin: 0.5em 0;
+        padding: 0.8em;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>File Manager</h1>
+      <input
+        type="text"
+        id="directory-path"
+        placeholder="Enter directory path"
+        value="/Users/simgeon-u/Desktop/연습장"
+      />
+      <button id="load-files">Load Files</button>
+      <input type="file" id="file-upload" />
+      <button id="upload-file">Upload File</button>
+      <ul id="file-list"></ul>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #f8f9fa, #e9ecef);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+      h1 {
+        font-size: 2.5em;
+        margin-bottom: 0.5em;
+        color: #343a40;
+      }
+      .container {
+        background: white;
+        padding: 2em;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      input[type='text'],
+      input[type='file'] {
+        width: 80%;
+        padding: 0.8em;
+        margin: 0.5em 0;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        font-size: 1em;
+      }
+      input[type='file'] {
+        display: none;
+      }
+      button {
+        padding: 0.8em 1.5em;
+        margin: 0.5em 0;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+        background: #007bff;
+        color: white;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      button:hover {
+        background: #0056b3;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      ul li {
+        background: #f8f9fa;
+        margin: 0.5em 0;
+        padding: 0.8em;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>File Manager</h1>
+      <input
+        type="text"
+        id="directory-path"
+        placeholder="Enter directory path"
+      />
+      <!-- <button id="select-directory">Select Directory</button> -->
+      <input type="file" id="directory-upload" webkitdirectory />
+      <button id="load-files">Load Files</button>
+      <input type="file" id="file-upload" />
+      <button id="upload-file">Upload File</button>
+      <ul id="file-list"></ul>
+    </div>
+    <script src="index.js"></script>
+    <script>
+      // document
+      //   .getElementById('select-directory')
+      //   .addEventListener('click', function () {
+      //     document.getElementById('directory-upload').click();
+      //   });
+
+      // document
+      //   .getElementById('directory-upload')
+      //   .addEventListener('change', function (event) {
+      //     const directoryPathInput = document.getElementById('directory-path');
+      //     if (event.target.files.length > 0) {
+      //       const fullPath = event.target.files[0].webkitRelativePath;
+      //       const directoryPath = fullPath.substring(0, fullPath.indexOf('/'));
+      //       // directoryPathInput.value = directoryPath;
+      //       // directoryPathInput.value = fullPath;
+      //     }
+      //   });
+    </script>
+  </body>
+</html>
